@@ -1,0 +1,15 @@
+body {
+    max-width: fit-content;
+    margin: 0 auto;
+
+    background-color: aliceblue; 
+    border: 2px solid darkmagenta;
+    border-radius: 10px;
+}
+
+
+
+ul{
+    margin-top: -15px;
+}
+

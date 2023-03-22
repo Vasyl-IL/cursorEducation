@@ -1,0 +1,14 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 80px;
+    background-color: aliceblue; 
+ }
+
+.aboutShelters {
+    margin-top: -15px;
+}
+
+ul {
+    margin-top: -15px;
+}
