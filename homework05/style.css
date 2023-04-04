@@ -1,0 +1,57 @@
+body {
+    background-color: rgba(8, 8, 8, 0.833);
+    color: white;
+}
+table {
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    table-layout: fixed;
+    column-gap: 10px;
+    box-shadow: 0 0 0 1px #787777;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px;
+    column-gap: 120px;
+    
+   
+  }
+  img {
+    Width: 20px;
+    Height: 10px;
+   
+  } 
+ th, 
+ td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #836a6a;
+  }
+
+   .light, 
+   .dots {
+    color: rgb(186, 185, 185);
+  }
+  .dots {
+    text-align: right;
+  }
+
+  .dots_bold{
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .search {
+    background: url(img/search-lupa.png) no-repeat left;
+    background-size: 20px;
+    background-position: 10px 10px;
+    border-radius: 10px;
+    background-color: rgba(93, 93, 93, 0.458);
+    padding: 15px;
+    opacity: 0,2;
+    float: right;
+    box-sizing: border-box;
+    border-style: none;
+    text-align: center;
+
+  }
+ 
