@@ -53,7 +53,7 @@ body{
 .grid_block1{
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: 73px 79px 569px;
+    grid-template-rows: 73px 79px 1fr;
     row-gap: 1px;
 }
 
