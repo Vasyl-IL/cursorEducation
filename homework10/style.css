@@ -1,0 +1,297 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    background: #d8c2d8;
+    margin: 0 auto;
+}
+
+:root{
+    --direction:0;
+}
+
+.newton_cradle{
+    position: relative;
+    margin: 70px auto;
+    bottom: 20px;
+    width: 350px;
+    height: 225px;
+    border-top: 10px solid rgb(156, 156, 156);
+    border-left: 10px solid rgb(156, 156, 156);
+    border-right: 10px solid rgb(156, 156, 156);
+    border-radius: 20px 20px 0 0;
+}  
+  .newton_cradle::after {
+    content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -43px;
+        left: -35px;
+        width: 400px;
+        height: 40px;
+        border-radius: 25px 25px 0 0;
+        background: radial-gradient(rgb(156, 156, 156), lightgray, rgb(156, 156, 156));
+        border: 2px solid rgb(156, 156, 156);
+        box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%);
+        z-index: -3;
+  }
+.pendulum-container{
+    position: absolute;
+    left: 50px;
+    z-index: -1;
+}
+.pendulum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2px;
+}
+.pendulum>span {
+    top: 2px;
+    left: 2px;
+    width: 2px;
+    height: 175px;
+    margin: 0px 15px;
+    position: relative;
+    background: repeating-linear-gradient( 45deg, black, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, white 1px, lightgray 3%, gray 60%, lightgray 100%); box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%);
+    }
+
+.pendulum>span:first-child::before{
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, #d1949f 1px, #c18994 3%, #b07c87 60%, #c18994 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.pendulum>span:nth-child(2):before {
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, #c18994 1px, #b07c87 3%,  #9f6f79 60%, #b07c87 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+
+
+.pendulum>span:nth-child(3):before {
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #b07c87 1px, #9f6f79 3%,  #8f646d 60%, #9f6f79 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+
+.pendulum>span:nth-child(4):before {
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #9f6f79 1px, #8f646d 3%, #78535b 60%, #8f646d 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.pendulum>span:nth-child(5):before {
+    background: repeating-linear-gradient( 45deg, #533a3f, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #8f646d 1px, #78535b 3%, #64464c 60%, #78535b 100%); box-shadow: 1px 5px 10px 3px  #533a3f(0 0 0 / 10%);
+}
+
+.pendulum>span:nth-child(6):before {
+    background: repeating-linear-gradient( 45deg, #533a3f, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #78535b 1px,  #64464c 3%, #533a3f 60%,  #64464c 100%); box-shadow: 1px 5px 10px 3px  #3d2b2f(0 0 0 / 10%);
+}
+
+.pendulum>span:last-child:before {
+    background: repeating-linear-gradient( 45deg, #211719, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #64464c 1px,  #533a3f 3%, #3b292c 60%,  #533a3f 100%); box-shadow: 1px 5px 10px 3px  #211719(0 0 0 / 10%);
+}
+
+.pendulum>span::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    top: 175px;
+    left: -15px;
+    z-index: -1;
+}
+
+.pendulum>span:first-child{
+    animation: pendium  1s ease-in-out infinite alternate;
+    --direction: 1;
+    transform-origin: top;
+}
+.pendulum>span:last-child{
+    animation: pendium  1s ease-in-out infinite alternate-reverse;
+    --direction: -1;
+    transform-origin: top;
+}
+
+@keyframes pendium{
+    0%,50%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(calc(45deg * var(--direction)));
+    }
+  }
+
+
+.shadow-container{
+    margin: 230px auto; 
+    z-index: -1;   
+}
+.shadow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadow>span{
+    width: 30px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 0.5px;
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+.shadow>span:first-child{
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, #d1949f 1px, #c18994 3%, #b07c87 60%, #c18994 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.shadow>span:nth-child(2){
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, #c18994 1px, #b07c87 3%,  #9f6f79 60%, #b07c87 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.shadow>span:nth-child(3){
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%, #c18994 1px, #b07c87 3%,  #9f6f79 60%, #b07c87 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.shadow>span:nth-child(4){
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #9f6f79 1px, #8f646d 3%, #78535b 60%, #8f646d 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.shadow>span:nth-child(5){
+    background: repeating-linear-gradient( 45deg, #64464c, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #9f6f79 1px, #8f646d 3%, #78535b 60%, #8f646d 100%); box-shadow: 1px 5px 10px 3px  #64464c(0 0 0 / 10%);
+}
+.shadow>span:nth-child(6){
+    background: repeating-linear-gradient( 45deg, #533a3f, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #78535b 1px,  #64464c 3%, #533a3f 60%,  #64464c 100%); box-shadow: 1px 5px 10px 3px  #3d2b2f(0 0 0 / 10%);
+}
+.shadow>span:last-child{
+    background: repeating-linear-gradient( 45deg, #211719, transparent 100px);
+    background: radial-gradient(circle at 65% 15%,  #64464c 1px,  #533a3f 3%, #3b292c 60%,  #533a3f 100%); box-shadow: 1px 5px 10px 3px  #211719(0 0 0 / 10%);
+} 
+
+.shadow>span:first-child{
+    animation: shadow  1s ease-in-out infinite alternate;
+    --direction: -1;
+}
+.shadow>span:last-child{
+    animation: shadow  1s ease-in-out infinite alternate-reverse;
+    --direction: 1;
+}
+
+@keyframes shadow {
+    0%,50%{
+        filter: blur(2px);
+        transform: translateX(0)
+      }
+      100%{
+        transform: translateX(calc(180px * var(--direction))) scale(1.4, .5);
+        filter: blur(10px);
+      }
+  }
+  
+
+  .escalibur{
+    position: relative;
+    margin: 150px auto;
+    width: 200px;
+    padding-bottom: 100px;
+    cursor: pointer;
+}
+.escalibur > span{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(87, 74, 74);
+    transition: all 1s linear;
+    border-radius: 30px;
+}
+.upper_sword{
+    top: 0;
+}
+.middle_sword{
+    top: 45%;
+}
+.lower_sword{
+    bottom: 0;
+}
+.lower_sword::before,
+.middle_sword::before,
+.upper_sword::before{
+    content: '';
+    top: 0;
+    right: 20px;
+    width: 20px;
+    height: 10px;
+    background-color: whitesmoke;
+    position: absolute;
+}
+.middle_sword::before{
+    left: 20px;
+}
+
+.escalibur:hover .lower_sword{
+    transform: rotate(45deg) translate(0, -50px) ;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    transition: 2s ease;
+}
+.escalibur:hover .middle_sword{
+    transform:rotate(-45deg) translate(11px, 24px);
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;
+    transition: 2s ease;
+}
+
+.escalibur:hover .upper_sword {
+    transform: translate(20px,-30px);
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #13e632, 0 0 80px #13e632, 0 0 90px #13e632, 0 0 100px #13e632, 0 0 150px #13e632;
+    transition: 2s ease;
+    opacity: 0;
+}
+
+
+
